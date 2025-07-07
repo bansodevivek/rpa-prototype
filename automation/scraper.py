@@ -1,5 +1,5 @@
 import pandas as pd
-
+from pathlib import Path
 def scrape_quotes(page):
     print("🔍 Scraping quotes...")
 
@@ -21,9 +21,13 @@ def scrape_quotes(page):
 
     print(f"✅ Scraped {len(quotes_data)} quotes.")
 
-    # # Export to CSV
-    # df = pd.DataFrame(quotes_data)
-    # df.to_csv("quotes.csv", index=False)
-    # print("📁 Saved to quotes.csv")
+  # Save to CSV in output folder relative to this script
+    output_dir = Path(r"C:\Users\ASUS\Prototype\rpa-prototype\output")
+    output_dir.mkdir(exist_ok=True)  # Create folder if not exists
+    csv_path = output_dir / "quotes.csv"
+
+    df = pd.DataFrame(quotes_data, columns=["Text", "Author", "Tags"])
+    df.to_csv(csv_path, index=False)
+    print(f"📁 Saved to {csv_path}")
 
     return quotes_data
