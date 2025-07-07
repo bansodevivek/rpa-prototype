@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  rpa:
+    build: .
+    volumes:
+      - ./output:/app/output     # Bind mount output folder for results/data persistence
+    stdin_open: true             # Keep STDIN open for interactive use if needed
+    tty: true                    # Allocate a pseudo-TTY for proper terminal handling

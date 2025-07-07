@@ -1,0 +1,28 @@
+# Ignore Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Ignore environment variables and credentials
+.env
+*.env
+
+# Ignore local development tools and virtual environments
+.venv/
+env/
+venv/
+.idea/
+.vscode/
+
+# Ignore Git and other VCS files
+.git/
+.gitignore
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore output or generated data (if not needed in image)
+output/

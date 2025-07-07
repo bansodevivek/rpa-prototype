@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+output/
+.env
+*.db
+*.sqlite
+.vscode/
+playwright-report/
